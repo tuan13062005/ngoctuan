@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm UCLN của 2 số a và b</title>
+</head>
+<body>
+    <h1>Tìm UCLN của 2 số a và b</h1>
+    <input type="number" id="a" placeholder="Nhập a" />
+    <input type="number" id="b" placeholder="Nhập b" />
+    <button onclick="timUCLN()">Tìm UCLN</button>
+    <p id="result"></p>
+
+    <script>
+        function timUCLN() {
+            let a = parseInt(document.getElementById('a').value);
+            let b = parseInt(document.getElementById('b').value);
+            while (b !== 0) {
+                let temp = b;
+                b = a % b;
+                a = temp;
+            }
+            document.getElementById('result').innerText = `UCLN là: ${a}`;
+        }
+    </script>
+</body>
+<a href="tinhtongtu1denn.html"> Tính tổng từ 1 đến n </a><br>
+<a href="tinhtongcacsochantu1denn.html"> Tính tổng các số chẵn từ 1 đến n </a><br>
+<a href="tinhtongcacsoletu1denn.html"> Tính tổng các số lẻ từ 1 đến n </a><br>
+<a href="kiemtrancophaisonguyentokhong.html">Kiểm tra n có phải số nguyên tố không</a>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên tố</title>
+</head>
+<body>
+    <h1>Kiểm tra n có phải số nguyên tố không?</h1>
+    <input type="number" id="n" placeholder="Nhập n" />
+    <button onclick="kiemTraNguyenTo()">Kiểm tra</button>
+    <p id="result"></p>
+
+    <script>
+        function kiemTraNguyenTo() {
+            const n = parseInt(document.getElementById('n').value);
+            if (n < 2) {
+                document.getElementById('result').innerText = `${n} không phải số nguyên tố.`;
+                return;
+            }
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) {
+                    document.getElementById('result').innerText = `${n} không phải số nguyên tố.`;
+                    return;
+                }
+            }
+            document.getElementById('result').innerText = `${n} là số nguyên tố.`;
+        }
+    </script>
+</body>
+<a href="tinhtongtu1denn.html"> Tính tổng từ 1 đến n </a><br>
+<a href="tinhtongcacsochantu1denn.html"> Tính tổng các số chẵn từ 1 đến n </a><br>
+<a href="tinhtongcacsoletu1denn.html"> Tính tổng các số lẻ từ 1 đến n </a><br>
+<a href="timuclncua2soavab.html"> Tìm UCLN của 2 số a và b </a>
+</html>

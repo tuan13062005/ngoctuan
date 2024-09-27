@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng các số lẻ từ 1 đến n</title>
+</head>
+<body>
+    <h1>Tính tổng các số lẻ từ 1 đến n</h1>
+    <input type="number" id="n" placeholder="Nhập n" />
+    <button onclick="tinhTongLe()">Tính tổng</button>
+    <p id="result"></p>
+
+    <script>
+        function tinhTongLe() {
+            const n = parseInt(document.getElementById('n').value);
+            let tong = 0;
+            for (let i = 1; i <= n; i += 2) {
+                tong += i;
+            }
+            document.getElementById('result').innerText = `Tổng các số lẻ từ 1 đến ${n} là: ${tong}`;
+        }
+    </script>
+</body>
+<a href="tinhtongtu1denn.html"> Tính tổng từ 1 đến n </a><br>
+<a href="tinhtongcacsochantu1denn.html"> Tính tổng các số chẵn từ 1 đến n </a><br>
+<a href="kiemtrancophaisonguyentokhong.html">Kiểm tra n có phải số nguyên tố không</a><br>
+<a href="timuclncua2soavab.html"> Tìm UCLN của 2 số a và b </a>
+</html>
